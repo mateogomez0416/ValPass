@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <link crossorigin="anonymous" media="all" integrity="sha512-FG+rXqMOivrAjdEQE7tO4BwM1poGmg70hJFTlNSxjX87grtrZ6UnPR8NkzwUHlQEGviu9XuRYeO8zH9YwvZhdg==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-146fab5ea30e8afac08dd11013bb4ee0.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-iXrV/b4ypc1nr10b3Giikqff+qAx5osQ0yJRxHRDd8mKFefdMtEZ0Sxs1QysJxuJBayOKThjsuMjynwBJQq0aw==" rel="stylesheet" href="https://github.githubassets.com/assets/site-897ad5fdbe32a5cd67af5d1bdc68a292.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-bdcUCE1osw1cEGLs662y4ulJx7ISeuLws/QBd3xlTAAQfjeO8A7quUiUAk0DWu9oVNW+g3GQ0dL+iAtAOaIntQ==" rel="stylesheet" href="https://github.githubassets.com/assets/github-6dd714084d68b30d5c1062ecebadb2e2.css" />
+  <style>
+    ol {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    #lia {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      background-color: {{valido_mayu}};
+    }
+    
+    #lia1 {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      background-color: {{valido_num}};
+    }
+
+    #lia2 {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      background-color: {{valido_min}};
+    }   
+    #lia3 {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      background-color: {{valido_charac}};
+    } 
+    
+    #result {
+      background: {{valido}};
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      color: yellow;
+      font-size: 2rem;
+    }
+    </style>
+
+
+</head>
+
+  <body class="logged-out env-production page-responsive session-authentication">
+    
+    
+        
+    
+      <div class="auth-form-header p-0">
+        <h1>Validador de Contraseña en Python</h1>
+      </div>
+
+      <div class="auth-form-body mt-3">
+
+        <div class="auth-form-header p-0">
+            <div class="auth-form-header p-0">
+                <h2> Criterios de la contraseña </h2>
+                <p>En el siguiente orden introduzca la contraseña de 10 Caracteres</p>
+            </div>
+           
+            
+            <ol >
+                <li id="lia"><a >1.) 1era letra en mayuscula</a></li>
+                <li id="lia1"><a >2.) 3 Numeros</a></li>
+                <li id="lia2"><a >3.) 3 minusculas</a></li>
+                <li id="lia3"><a >4.) 3 Caracteres especiales</a></li>
+            </ol>
+              
+
+        </div>
+
+        <div id="result" class="auth-form-header p-0"> 
+          
+          
+          {{user}}      Contraseña {{sms}}
+          
+          
+        </div>
+        
+        <div> <h1> <a href="{% url 'index' %}">Regresar</a></h1>    </div>
+
+        
+      </div>
+    
+
+  </body>
+</html>
